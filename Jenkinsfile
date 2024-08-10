@@ -8,7 +8,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Running build automation'
-                sudo chmod +x gradlew
+                sudo chmod +ux gradlew
                 sh './gradlew build --no-daemon'
                 archiveArtifacts artifacts: 'dist/railwaytt.zip'
             }
